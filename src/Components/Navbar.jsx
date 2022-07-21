@@ -16,13 +16,13 @@ const activeStyle = {
 
 function Navbar() {
    return (
-      <Flex gap={7} p={5} align="center" position="sticky" top='0' zIndex='7'>
+      <Flex gap={7} p={5} align="center" position="sticky" top='0' zIndex='7' borderBottom='1px solid rgb(27, 27, 27)' bg='rgb(15, 6, 23)'>
          <Image h='47px' src='https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.15' alt='app logo' mr={4} />
          <NavLink to="/" style={({ isActive }) => isActive ? activeStyle : baseStyle}>Home</NavLink>
          <NavLink to="/tvShows" style={({ isActive }) => isActive ? activeStyle : baseStyle}>TV Shows</NavLink>
          <NavLink to="/movies" style={({ isActive }) => isActive ? activeStyle : baseStyle}>Movies</NavLink>
          <Spacer />
-         <Input w='370px' color="white" focusBorderColor="purple.500" placeholder="🔍 Search for Movies, Shows, Channels etc. " />
+         <Input w='370px' color="white" focusBorderColor="purple.500" borderColor='rgb(111, 111, 111)' borderRadius="lg" placeholder="🔍 Search for Movies, Shows, Channels etc. " />
          <HStack gap={2}>
             <NavLink className='nav-ls-btn' to="/login">Login</NavLink>
             <NavLink className='nav-ls-btn' to="/signup">Sign Up</NavLink>
