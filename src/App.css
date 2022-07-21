@@ -22,3 +22,78 @@
   color: rgb(131, 48, 198);
   cursor: pointer;
 }
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(15, 6, 23);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(34, 26, 41);
+  border-radius: 7px;
+}
+
+.slider {
+  height: 77vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 36px;
+  position: relative;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider>div {
+  height: 100%;
+  width: 88%;
+  position: relative;
+}
+
+.slider>div>img {
+  height: 100%;
+  width: 100%;
+  border-radius: 11px;
+}
+
+.slider-watch-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 2px solid whitesmoke;
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 11px 21px;
+  bottom: 27px;
+  left: 27px;
+  background-color: rgba(37, 37, 37, 0.377);
+}
+
+.slider-watch-btn:hover {
+  color: rgb(47, 47, 47);
+  background-color: #fff;
+}
+
+.arrow {
+  font-size: 47px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 6;
+  font-weight: normal;
+}
+
+.arrow.left {
+  left: 99px;
+}
+
+.arrow.right {
+  right: 99px;
+}
