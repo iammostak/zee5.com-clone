@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FaPlay } from "react-icons/fa";
+import { FaCrown, FaPlay } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 
 function Slideshow() {
@@ -22,17 +22,28 @@ function Slideshow() {
       setCurrent(current === data.length - 1 ? 0 : current + 1);
    }
 
+   useEffect(() => {
+      setTimeout(() => {
+         if (current === data.length - 1) setCurrent(0);
+         else setCurrent(current + 1);
+      }, 3000)
+   }, [current, setCurrent, data]);
+
    return (
       <div className='slider'>
          <IoIosArrowBack className='arrow left' onClick={prevSlide} />
          {
             data.map((item, index) => (
                (index === current) && (
-                  <div>
+                  <div key={index}>
                      <img src={item.url} alt={item.title} />
                      <button className='slider-watch-btn'>
                         <FaPlay /> WATCH
                      </button>
+                     <button className='slider-buy-btn'>
+                        <FaCrown /> BUY PLAN
+                     </button>
+                     <span className='slider-item-title'>{item.title}</span>
                   </div>
                )
             ))

@@ -44,6 +44,7 @@ body::-webkit-scrollbar-thumb {
   overflow-x: scroll;
   gap: 36px;
   position: relative;
+  cursor: pointer;
 }
 
 .slider::-webkit-scrollbar {
@@ -68,18 +69,52 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   gap: 11px;
-  border: 2px solid whitesmoke;
   border-radius: 7px;
   font-weight: bold;
   padding: 11px 21px;
   bottom: 27px;
   left: 27px;
-  background-color: rgba(37, 37, 37, 0.377);
+  color: rgb(47, 47, 47);
+  background-color: #fff;
+  border: 2px solid whitesmoke;
 }
 
 .slider-watch-btn:hover {
-  color: rgb(47, 47, 47);
-  background-color: #fff;
+  color: whitesmoke;
+  background-color: rgba(37, 37, 37, 0.377);
+}
+
+.slider-buy-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 2px solid rgb(131, 48, 198);
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 11px 21px;
+  bottom: 27px;
+  left: 170px;
+  background-color: rgb(131, 48, 198);
+}
+
+.slider-buy-btn:hover {
+  border-color: whitesmoke;
+  background-color: rgba(37, 37, 37, 0.377);
+}
+
+.slider-item-title {
+  position: absolute;
+  font-size: 36px;
+  font-weight: 800;
+  top: 12px;
+  left: 27px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, .8);
+  background: linear-gradient(40deg, #a785ff 35%, #fff 55%);
+  background-clip: text;
+  -webkit-text-stroke: 4px transparent;
 }
 
 .arrow {
@@ -96,4 +131,45 @@ body::-webkit-scrollbar-thumb {
 
 .arrow.right {
   right: 99px;
+}
+
+.top-ten-numbers {
+  position: absolute;
+  font-family: NotoSansBold, sans-serif;
+  font-size: 4rem;
+  line-height: 1em;
+  font-weight: 800;
+  top: -2px;
+  right: 7px;
+  color: rgba(0, 0, 0, .8);
+  background: linear-gradient(40deg, #a785ff 35%, #fff 55%);
+  background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+}
+
+.card-icon {
+  position: absolute;
+  color: red;
+  background-color: whitesmoke;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-play-icon {
+  position: absolute;
+  background-color: rgba(37, 37, 37, 0.377);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.card-play-icon:hover {
+  color: rgb(47, 47, 47);
+  background-color: whitesmoke;
 }
