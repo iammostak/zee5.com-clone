@@ -7,11 +7,12 @@
 .nav-ls-btn {
   border: 1px solid rgb(131, 48, 198);
   background-color: rgb(131, 48, 198);
-  padding: 5px 11px;
+  padding: 6px 11px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .footer-topic-title {
@@ -112,7 +113,7 @@ body::-webkit-scrollbar-thumb {
   left: 27px;
   letter-spacing: 2px;
   color: rgba(0, 0, 0, .8);
-  background: linear-gradient(40deg, #a785ff 35%, #fff 55%);
+  background: linear-gradient(40deg, #a785ff 35%, lightgray 55%);
   background-clip: text;
   -webkit-text-stroke: 4px transparent;
 }
@@ -172,4 +173,14 @@ body::-webkit-scrollbar-thumb {
 .card-play-icon:hover {
   color: rgb(47, 47, 47);
   background-color: whitesmoke;
+}
+
+.google-icon {
+  font-size: 24px;
+  margin-right: 1rem;
+}
+
+span {
+  color: rgb(176, 80, 255);
+  cursor: pointer;
 }

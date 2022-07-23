@@ -27,7 +27,7 @@ function PremiumBollywood() {
                      <Box className='card-play-icon' h='5rem' w='5rem' top='33%' left='35%' fontSize='3xl'>
                         <FaPlay style={{ marginLeft: '5px' }} />
                      </Box>
-                     <Box className='card-icon' bg='rgb(34, 26, 41)' bottom='63px' right='14px' color='gray.500' fontSize='xs'>
+                     <Box className='card-icon' bg='rgb(34, 26, 41)' bottom='41px' right='14px' color='gray.500' fontSize='xs'>
                         <FaShareAlt />
                      </Box>
                      <Box my={1}>
