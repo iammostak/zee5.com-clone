@@ -3,13 +3,13 @@ import { useState } from "react";
 
 function Movies() {
    const [loading, setLoading] = useState(false);
-   
+
    setTimeout(() => setLoading(true), 3000);
 
    return (
       <Box my={212}>
          {!loading && <Button isLoading variant='ghost'></Button>}
-         {loading && <Box>
+         {loading && <Box color='gray'>
             Unable to load,<br />there is some issue right now...
          </Box>}
       </Box>
