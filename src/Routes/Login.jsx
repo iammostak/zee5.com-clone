@@ -46,8 +46,8 @@ function Login() {
             <Button bg='rgb(69, 9, 71)' _hover='rgb(69, 9, 71)' borderRadius={100} h='44px' w='44px' fontWeight='bold' pb={1}>or</Button>
          </VStack>
          <VStack gap={4}>
-            <Input autoFocus={true} value={text.email} onChange={(event) => setText({ ...text, email: event.target.value })} variant='flushed' borderColor='rgb(111, 111, 111)' focusBorderColor='rgb(176, 80, 255)' placeholder='E-mail' w='333px' />
-            <Input value={text.password} onChange={(event) => setText({ ...text, password: event.target.value })} variant='flushed' borderColor='rgb(111, 111, 111)' focusBorderColor='rgb(176, 80, 255)' placeholder='Password' w='333px' />
+            <Input type='email' autoFocus={true} value={text.email} onChange={(event) => setText({ ...text, email: event.target.value })} variant='flushed' borderColor='rgb(111, 111, 111)' focusBorderColor='rgb(176, 80, 255)' placeholder='E-mail' w='333px' />
+            <Input type='password' value={text.password} onChange={(event) => setText({ ...text, password: event.target.value })} variant='flushed' borderColor='rgb(111, 111, 111)' focusBorderColor='rgb(176, 80, 255)' placeholder='Password' w='333px' />
             <Text fontSize='sm' color='rgb(176, 80, 255)'>Forgot Password?</Text>
             <Button disabled={text.email === '' || text.password === ''} onClick={handleLogin} w='333px' h='47px' variant='outline' borderColor='rgb(111, 111, 111)' _hover="transparent" color='gray'>Login</Button>
             <Text fontSize='sm' color='lightgray'>New to ZEE5? <span onClick={goToSignup}>Register</span></Text>
