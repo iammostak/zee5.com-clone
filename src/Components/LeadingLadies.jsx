@@ -14,8 +14,8 @@ function LeadingLadies() {
    }, []);
 
    return (
-      <Box m={5} textAlign='left'>
-         <Text fontSize='2xl' fontWeight='bold' mt={10}>Leading Ladies</Text>
+      <Box m={5} mt={20} textAlign='left'>
+         <Text fontSize='4xl' fontWeight='bold' my={7}>Leading Ladies</Text>
          <Grid templateColumns='repeat(5, 1fr)' gap={3} my={4}>
             {
                data.map((item, index) => (

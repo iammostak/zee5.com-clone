@@ -14,8 +14,8 @@ function TopTen() {
    }, []);
 
    return (
-      <Box m={10} textAlign='left'>
-         <Text fontSize='2xl' fontWeight='bold'>Top 10 in India</Text>
+      <Box m={5} mt={20} textAlign='left'>
+         <Text fontSize='4xl' fontWeight='bold' my={7}>Top 10 in India</Text>
          <Grid templateColumns='repeat(5, 1fr)' gap={7} my={4}>
             {
                data.map((item, index) => (
