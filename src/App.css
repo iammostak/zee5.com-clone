@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 
 .slider>div {
   height: 100%;
-  width: 88%;
+  width: 95%;
   position: relative;
 }
 
@@ -127,11 +127,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .arrow.left {
-  left: 99px;
+  left: 50px;
 }
 
 .arrow.right {
-  right: 99px;
+  right: 50px;
 }
 
 .top-ten-numbers {

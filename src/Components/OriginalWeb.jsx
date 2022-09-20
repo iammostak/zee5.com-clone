@@ -14,8 +14,8 @@ function OriginalWeb() {
    }, []);
 
    return (
-      <Box m={5} textAlign='left'>
-         <Text fontSize='2xl' fontWeight='bold' mt={10}>ZEE5 Original Web Series</Text>
+      <Box m={5} mt={20} textAlign='left'>
+         <Text fontSize='4xl' fontWeight='bold' my={7}>ZEE5 Original Web Series</Text>
          <Grid templateColumns='repeat(6, 1fr)' gap={4} my={4}>
             {
                data.map((item, index) => (
