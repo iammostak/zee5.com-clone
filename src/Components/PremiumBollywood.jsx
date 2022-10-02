@@ -7,7 +7,7 @@ function PremiumBollywood() {
    const [data, setData] = useState([]);
 
    useEffect(() => {
-      axios.get(`https://json-server-mock-api-all.herokuapp.com/premiumBollywood`)
+      axios.get(`https://fake-restful-api-production.up.railway.app/premiumBollywood`)
          .then((res) => {
             setData(res.data);
          });

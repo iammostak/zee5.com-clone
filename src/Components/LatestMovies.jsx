@@ -7,14 +7,14 @@ function LatestMovies() {
    const [data, setData] = useState([]);
 
    useEffect(() => {
-      axios.get(`https://json-server-mock-api-all.herokuapp.com/zeeLatest`)
+      axios.get(`https://fake-restful-api-production.up.railway.app/zeeLatest`)
          .then((res) => {
             setData(res.data);
          });
    }, []);
 
    return (
-      <Box m={5} mt={20}textAlign='left'>
+      <Box m={5} mt={20} textAlign='left'>
          <Text fontSize='4xl' fontWeight='bold' my={7}>Latest Movies on ZEE5</Text>
          <Grid templateColumns='repeat(5, 1fr)' gap={3} my={4}>
             {

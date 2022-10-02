@@ -7,7 +7,7 @@ function IMDBtopPicks() {
    const [data, setData] = useState([]);
 
    useEffect(() => {
-      axios.get(`https://json-server-mock-api-all.herokuapp.com/IMDBtopPicks`)
+      axios.get(`https://fake-restful-api-production.up.railway.app/IMDBtopPicks`)
          .then((res) => {
             setData(res.data);
          });
