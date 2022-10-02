@@ -8,7 +8,7 @@ function Slideshow() {
    const [current, setCurrent] = useState(0);
 
    useEffect(() => {
-      axios.get(`https://json-server-mock-api-all.herokuapp.com/zeeSlide`)
+      axios.get(`https://fake-restful-api-production.up.railway.app/zeeSlide`)
          .then((res) => {
             setData(res.data);
          });

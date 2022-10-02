@@ -7,7 +7,7 @@ function OriginalWeb() {
    const [data, setData] = useState([]);
 
    useEffect(() => {
-      axios.get(`https://json-server-mock-api-all.herokuapp.com/zeeOriginalWebSeries`)
+      axios.get(`https://fake-restful-api-production.up.railway.app/zeeOriginalWebSeries`)
          .then((res) => {
             setData(res.data);
          });

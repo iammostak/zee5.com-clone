@@ -7,7 +7,7 @@ function TopTen() {
    const [data, setData] = useState([]);
 
    useEffect(() => {
-      axios.get(`https://json-server-mock-api-all.herokuapp.com/zeeTop10`)
+      axios.get(`https://fake-restful-api-production.up.railway.app/zeeTop10`)
          .then((res) => {
             setData(res.data);
          });
