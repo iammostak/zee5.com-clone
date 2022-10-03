@@ -52,13 +52,13 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
-.slider>div {
+.slider > div {
   height: 100%;
   width: 95%;
   position: relative;
 }
 
-.slider>div>img {
+.slider > div > img {
   height: 100%;
   width: 100%;
   border-radius: 11px;
@@ -112,7 +112,7 @@ body::-webkit-scrollbar-thumb {
   top: 12px;
   left: 27px;
   letter-spacing: 2px;
-  color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, 0.8);
   background: linear-gradient(40deg, #a785ff 35%, lightgray 55%);
   background-clip: text;
   -webkit-text-stroke: 4px transparent;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 800;
   top: -2px;
   right: 7px;
-  color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, 0.8);
   background: linear-gradient(40deg, #a785ff 35%, #fff 55%);
   background-clip: text;
   -webkit-text-stroke: 4px transparent;
@@ -183,4 +183,8 @@ body::-webkit-scrollbar-thumb {
 span {
   color: rgb(176, 80, 255);
   cursor: pointer;
+}
+
+.scrollBar::-webkit-scrollbar {
+  display: none;
 }
