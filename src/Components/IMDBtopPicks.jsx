@@ -4,34 +4,34 @@ import { useEffect, useState } from "react";
 import Card from "./common/Card";
 
 function IMDBtopPicks() {
-  const [data, setData] = useState([]);
+   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(`https://fake-restful-api-production.up.railway.app/IMDBtopPicks`)
-      .then((res) => {
-        setData(res.data);
-      });
-  }, []);
+   useEffect(() => {
+      axios
+         .get(`https://fake-restful-api.onrender.com/IMDBtopPicks`)
+         .then((res) => {
+            setData(res.data);
+         });
+   }, []);
 
-  return (
-    <Box m={5} mt={20} textAlign="left">
-      <Text fontSize="4xl" fontWeight="bold" my={7}>
-        IMDB Top Picks
-      </Text>
-      <Grid
-        className="scrollBar"
-        my={4}
-        gap={4}
-        templateColumns="repeat(15, 1fr)"
-        overflowX={"scroll"}
-      >
-        {data.map((item, index) => (
-          <Card item={item} index={index} />
-        ))}
-      </Grid>
-    </Box>
-  );
+   return (
+      <Box m={5} mt={20} textAlign="left">
+         <Text fontSize="4xl" fontWeight="bold" my={7}>
+            IMDB Top Picks
+         </Text>
+         <Grid
+            className="scrollBar"
+            my={4}
+            gap={4}
+            templateColumns="repeat(15, 1fr)"
+            overflowX={"scroll"}
+         >
+            {data.map((item, index) => (
+               <Card item={item} index={index} />
+            ))}
+         </Grid>
+      </Box>
+   );
 }
 
 export default IMDBtopPicks;
