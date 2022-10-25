@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaCrown, FaPlay } from "react-icons/fa";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function Slideshow() {
    const [data, setData] = useState([]);
    const [current, setCurrent] = useState(0);
 
    useEffect(() => {
-      axios.get(`https://fake-restful-api-production.up.railway.app/zeeSlide`)
+      axios
+         .get(`https://fake-restful-api.onrender.com/zeeSlide`)
          .then((res) => {
             setData(res.data);
          });
@@ -16,39 +17,38 @@ function Slideshow() {
 
    const prevSlide = () => {
       setCurrent(current === 0 ? data.length - 1 : current - 1);
-   }
+   };
 
    const nextSlide = () => {
       setCurrent(current === data.length - 1 ? 0 : current + 1);
-   }
+   };
 
    useEffect(() => {
       setTimeout(() => {
          if (current === data.length - 1) setCurrent(0);
          else setCurrent(current + 1);
-      }, 3000)
+      }, 3000);
    }, [current, setCurrent, data]);
 
    return (
-      <div className='slider'>
-         <IoIosArrowBack className='arrow left' onClick={prevSlide} />
-         {
-            data.map((item, index) => (
-               (index === current) && (
+      <div className="slider">
+         <IoIosArrowBack className="arrow left" onClick={prevSlide} />
+         {data.map(
+            (item, index) =>
+               index === current && (
                   <div key={index}>
                      <img src={item.url} alt={item.title} />
-                     <button className='slider-watch-btn'>
+                     <button className="slider-watch-btn">
                         <FaPlay /> WATCH
                      </button>
-                     <button className='slider-buy-btn'>
+                     <button className="slider-buy-btn">
                         <FaCrown /> BUY PLAN
                      </button>
-                     <span className='slider-item-title'>{item.title}</span>
+                     <span className="slider-item-title">{item.title}</span>
                   </div>
                )
-            ))
-         }
-         <IoIosArrowForward className='arrow right' onClick={nextSlide} />
+         )}
+         <IoIosArrowForward className="arrow right" onClick={nextSlide} />
       </div>
    );
 }
